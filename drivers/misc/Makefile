@@ -79,3 +79,4 @@ obj-$(CONFIG_FPR_FPC)		+= fpr_FingerprintCard/
 obj-y                           += qrc/
 
 obj-$(CONFIG_SPI_XIAOMI_TP) += spi-xiaomi-tp.o
+obj-$(CONFIG_MOTOR_DRV8846) += drv8846.o
