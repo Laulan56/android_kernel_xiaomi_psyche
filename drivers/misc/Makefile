@@ -80,3 +80,4 @@ obj-y                           += qrc/
 
 obj-$(CONFIG_SPI_XIAOMI_TP) += spi-xiaomi-tp.o
 obj-$(CONFIG_MOTOR_DRV8846) += drv8846.o
+obj-$(CONFIG_HALL_AKM09970) += akm09970.o
