@@ -1,0 +1,24 @@
+--2022-01-09 13:02:56--  https://github.com/Laulan56/kernel_garbage_sorter/raw/master/main.sh
+Resolving github.com (github.com)... 20.205.243.166, 205.251.194.8, 205.251.193.165, ...
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... No data received.
+Retrying.
+
+--2022-01-09 13:04:57--  (try: 2)  https://github.com/Laulan56/kernel_garbage_sorter/raw/master/main.sh
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... No data received.
+Retrying.
+
+--2022-01-09 13:07:32--  (try: 3)  https://github.com/Laulan56/kernel_garbage_sorter/raw/master/main.sh
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... No data received.
+Retrying.
+
+--2022-01-09 13:09:35--  (try: 4)  https://github.com/Laulan56/kernel_garbage_sorter/raw/master/main.sh
+Connecting to github.com (github.com)|20.205.243.166|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/Laulan56/kernel_garbage_sorter/master/main.sh [following]
+--2022-01-09 13:09:35--  https://raw.githubusercontent.com/Laulan56/kernel_garbage_sorter/master/main.sh
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 0.0.0.0, ::
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|0.0.0.0|:443... failed: Connection refused.
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|::|:443... failed: Connection refused.
