@@ -26,6 +26,7 @@
 #define to_drm_minor(d) dev_get_drvdata(d)
 #define to_drm_connector(d) dev_get_drvdata(d)
 
+
 /**
  * DOC: overview
  *
@@ -385,6 +386,10 @@ static ssize_t complete_commit_time_show(struct device *dev,
 	return complete_commit_time_get(connector, buf);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> eea5b679bb74... drivers/gpu/drm/: Import OEM changes
 static ssize_t thermal_hbm_disabled_store(struct device *device,
 			   struct device_attribute *attr,
 			   const char *buf, size_t count)
