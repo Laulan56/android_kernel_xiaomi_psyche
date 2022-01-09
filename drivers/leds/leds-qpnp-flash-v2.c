@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-2.0-only
 /*
  * Copyright (c) 2016-2021, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2021 XiaoMi, Inc.
  */
 
 #define pr_fmt(fmt)	"flashv2: %s: " fmt, __func__
@@ -370,12 +371,10 @@ static int max_ires_curr_ma_table[MAX_IRES_LEVELS] = {
 	FLASH_LED_IRES12P5_MAX_CURR_MA, FLASH_LED_IRES10P0_MAX_CURR_MA,
 	FLASH_LED_IRES7P5_MAX_CURR_MA, FLASH_LED_IRES5P0_MAX_CURR_MA
 };
-
 static struct flash_node_data *g_torch_0;
 static struct flash_node_data *g_torch_1;
 static struct flash_switch_data *g_switch_0;
 static struct flash_switch_data *g_switch_1;
-
 static inline int get_current_reg_code(int target_curr_ma, int ires_ua)
 {
 	if (!ires_ua || !target_curr_ma || (target_curr_ma < (ires_ua / 1000)))
