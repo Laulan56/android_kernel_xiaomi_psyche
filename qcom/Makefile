@@ -1,3 +1,98 @@
+ifeq ($(CONFIG_BOARD_XIAOMI_SM8250),y)
+ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
+
+ifeq ($(CONFIG_BOARD_ALIOTH),y)
+dtbo-$(CONFIG_BOARD_ALIOTH) += \
+                alioth-sm8250-overlay.dtbo
+alioth-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_APOLLO),y)
+dtbo-$(CONFIG_BOARD_APOLLO) += \
+                apollo-sm8250-overlay.dtbo
+apollo-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_CAS),y)
+dtbo-$(CONFIG_BOARD_CAS) += \
+                cas-sm8250-overlay.dtbo
+cas-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_CMI),y)
+dtbo-$(CONFIG_BOARD_CMI) += \
+                cmi-sm8250-overlay.dtbo
+cmi-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_ELISH),y)
+dtbo-$(CONFIG_BOARD_ELISH) += \
+                elish-sm8250-overlay.dtbo
+elish-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_ENUMA),y)
+dtbo-$(CONFIG_BOARD_ENUMA) += \
+                enuma-sm8250-overlay.dtbo
+enuma-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_LMI),y)
+dtbo-$(CONFIG_BOARD_LMI) += \
+                lmi-sm8250-overlay.dtbo
+lmi-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_PSYCHE),y)
+dtbo-$(CONFIG_BOARD_PSYCHE) += \
+		psyche-sm8250-overlay.dtbo
+psyche-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_THYME),y)
+dtbo-$(CONFIG_BOARD_THYME) += \
+                thyme-sm8250-overlay.dtbo
+thyme-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_UMI),y)
+dtbo-$(CONFIG_BOARD_UMI) += \
+                umi-sm8250-overlay.dtbo
+umi-sm8250-overlay.dtbo-base := kona.dtb kona-v2.dtb kona-v2.1.dtb
+endif
+
+endif
+endif
+
+ifeq ($(CONFIG_BOARD_XIAOMI_SM7250),y)
+ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
+
+ifeq ($(CONFIG_BOARD_MONET),y)
+dtbo-$(CONFIG_BOARD_MONET) += \
+                moent-sm7250-overlay.dtbo
+dtb-$(CONFIG_BOARD_MONET) += \
+                moent-sm7250.dtb
+monet-sm7250-overlay.dtbo-base := lito.dtb lito-v2.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_PICASSO),y)
+dtbo-$(CONFIG_BOARD_PICASSO) += \
+                picasso-sm7250-overlay.dtbo
+dtb-$(CONFIG_BOARD_PICASSO) += \
+                picasso-sm7250.dtb
+picasso-sm7250-overlay.dtbo-base := lito.dtb lito-v2.dtb
+endif
+
+ifeq ($(CONFIG_BOARD_VANGOGH),y)
+dtbo-$(CONFIG_BOARD_VANGOGH) += \
+                vangogh-sm7250-overlay.dtbo
+dtb-$(CONFIG_BOARD_VANGOGH) += \
+                vangogh-sm7250.dtb
+vangogh-sm7250-overlay.dtbo-base := lito.dtb lito-v2.dtb
+endif
+
+endif
+else
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
         dtbo-$(CONFIG_ARCH_KONA) += \
                 kona-cdp-overlay.dtbo \
@@ -61,7 +156,8 @@ dtb-$(CONFIG_ARCH_KONA) += kona-rumi.dtb \
         kona-v2.1-arglass.dtb \
         qrb5165-iot-rb5.dtb \
         qrb5165n-iot-rb5.dtb \
-        kona-v2.1-iot-rb5.dtb
+        kona-v2.1-iot-rb5.dtb \
+        kona-v2.1-hdk.dtb
 endif
 
 ifeq ($(CONFIG_BUILD_ARM64_DT_OVERLAY),y)
@@ -384,6 +480,7 @@ qm215-qrd-overlay.dtbo-base := qm215.dtb
 qcm2150-qrd-overlay.dtbo-base := qcm2150.dtb
 qm215-qrd-smb1360-overlay.dtbo-base := qm215.dtb
 else
+
 dtb-$(CONFIG_ARCH_SDM439) += sdm439-mtp.dtb \
 	sdm439-cdp.dtb \
 	sdm439-qrd.dtb \
@@ -400,6 +497,7 @@ dtb-$(CONFIG_ARCH_SDM429) += sdm429-mtp.dtb \
 	sdm429-qrd.dtb \
 	sda429-mtp.dtb \
 	sda429-cdp.dtb
+endif
 endif
 
 always		:= $(dtb-y)
