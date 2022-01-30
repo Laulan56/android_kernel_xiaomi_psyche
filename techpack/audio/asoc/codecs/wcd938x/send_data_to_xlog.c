@@ -27,7 +27,9 @@ int xlog_wcd938x_send_int(const unsigned int zl, const unsigned int zr)
 	if (ret < 0) {
 		return ret;
 	}
+#ifdef CONFIG_XLOGCHAR
 	xlogchar_kwrite(msg, sizeof(msg));
+#endif
 	pr_info("%s: send msg: %s", __func__, msg);
 	return ret;
 }
