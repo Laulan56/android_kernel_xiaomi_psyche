@@ -440,7 +440,6 @@ config BOARD_XIAOMI_SM8250
 	select ARCH_QCOM
 	select ARCH_KONA
 
-if BOARD_XIAOMI_SM8250
 config BOARD_ALIOTH
 	bool "Alioth and AliothIN platform"
 	select BOARD_XIAOMI_SM8250
@@ -500,7 +499,7 @@ config BOARD_UMI
 	select BOARD_XIAOMI_SM8250
 	help
 	  This enables support for Xiaomi MI 10.
-endif
+
 
 endif
 endmenu
