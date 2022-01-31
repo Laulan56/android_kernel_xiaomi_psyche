@@ -322,6 +322,10 @@ static inline void qdf_trace_msg(QDF_MODULE_ID module, QDF_TRACE_LEVEL level,
 				 const char *str_format, ...)
 {
 }
+static inline void qdf_vtrace_msg(QDF_MODULE_ID module, QDF_TRACE_LEVEL level,
+		    const char *str_format, va_list val){
+
+			}
 
 #define QDF_ASSERT(_condition)
 

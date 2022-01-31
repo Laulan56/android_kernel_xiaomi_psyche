@@ -944,6 +944,9 @@ qdf_export_symbol(qdf_dp_trace_set_track);
  *
  * Return: None
  */
+ #define ROW_SIZE 16
+/* Buffer size = data bytes(2 hex chars plus space) + NULL */
+#define BUFFER_SIZE ((QDF_DP_TRACE_RECORD_SIZE * 3) + 1)
 static void
 dump_dp_hex_trace(char *prepend_str, uint8_t *inbuf, uint8_t inbuf_len)
 {
