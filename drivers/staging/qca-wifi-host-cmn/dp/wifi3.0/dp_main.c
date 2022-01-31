@@ -10555,6 +10555,7 @@ void dp_flush_ring_hptp(struct dp_soc *soc, hal_ring_handle_t hal_srng)
  *
  * Return: QDF_STATUS
  */
+#define IPA_TCL_DATA_RING_IDX 2
 static QDF_STATUS dp_runtime_suspend(struct cdp_soc_t *soc_hdl, uint8_t pdev_id)
 {
 	struct dp_soc *soc = cdp_soc_t_to_dp_soc(soc_hdl);
